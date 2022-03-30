@@ -20,7 +20,6 @@ namespace WTFApp
     /// </summary>
     public partial class MainWindow : Window
     {
-        public int cashCount = 0;
         private void Button1_click(object sender, RoutedEventArgs e)
         {
             if (perbutton.IsChecked == true)
@@ -38,8 +37,10 @@ namespace WTFApp
 
         private void Button2Click(object sender, RoutedEventArgs e)
         {
-            cashCount += 1;
-            cash.Content = "cash: " + cashCount;
+            int x = 0;
+            x++;
+            int y = x+1;
+            cash.Content = "cash: " + y;
     }
     }
 }
