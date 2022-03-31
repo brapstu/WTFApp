@@ -10,6 +10,7 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
+using System.Media;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
@@ -21,18 +22,15 @@ namespace WTFApp
     public partial class MainWindow : Window
     {
         public int cashCount = 0;
+        public SoundPlayer player = new(@"eduardo.wav");
         private void Button1_click(object sender, RoutedEventArgs e)
         {
-            if (perbutton.IsChecked == true)
-            {
+            if ((bool)perbutton.IsChecked)
                 MessageBox.Show("Crusty G Automation");
-            }
-            else if (eddbutton.IsChecked == true)
+            else if ((bool)perbutton.IsChecked)
             {
-                System.Media.SoundPlayer player = new System.Media.SoundPlayer(@"eduardo.wav");
                 player.Play();
                 MessageBox.Show("well well well");
-                player.Stop();
             }
         }
 
